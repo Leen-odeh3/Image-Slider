@@ -2,46 +2,58 @@
     height: 100vh;
     width: 100%;
     background-color: rgb(67, 125, 9);
-    padding-top: 70px;
-
-}
-
-.main {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
     width: 70%;
-    height: 80%;
-    ;
+    height: 90%;
     background-color: rgb(216, 56, 56);
     position: relative;
-    margin: auto;
-}
-
-.wrapper {
-    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .wrapper {
+    width: 100vw;
     height: 100%;
     display: flex;
-    overflow: hidden;
-}
-
-.wrapper img {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .wrapper img {
     height: 100%;
     width: 100vw;
-
-}
-
-.bi-arrow-right-circle,
-.bi-arrow-left-circle {
+    object-fit: cover;
+  }
+  
+  .bi-arrow-right-circle,
+  .bi-arrow-left-circle {
     position: absolute;
     cursor: pointer;
     top: 50%;
     font-size: 40px;
     color: rgb(219, 137, 137);
     z-index: 9999;
-}
-
-.bi-arrow-right-circle {
-    right: -50px;
-}
-
-.bi-arrow-left-circle {
-    left: -50px;
-}
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bi-arrow-right-circle:hover,
+  .bi-arrow-left-circle:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .bi-arrow-right-circle {
+    right: 20px;
+  }
+  
+  .bi-arrow-left-circle {
+    left: 20px;
+  }
+  
